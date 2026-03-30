@@ -147,6 +147,32 @@ Generates district boundary SLD styling rules programmatically.
 
 ---
 
+### 10. `spatial_utilization_conformity_2024.py` — Spatial Conformity Mapping
+
+Performs spatial utilization conformity analysis for Kota Tasikmalaya. It intersects land use data with RTRW spatial plans and district boundaries, classifies adherence as 'Sesuai' or 'Tidak Sesuai', recalculates areas, and generates a final shapefile with a CSV summary table.
+
+```bash
+& "C:\Program Files\QGIS 3.44.7\bin\python-qgis.bat" spatial_utilization_conformity_2024.py
+```
+
+---
+
+### 11. `process_shapefiles.py` — Merged Suitability Geoprocessing
+
+Iteratively intersects Land Use (`PENGGUNAAN_LAHAN.shp`), RDTR (`Polaruang_Tasikmalaya.shp`), RTRW, and Kecamatan shapefiles to generate a fully merged suitability shapefile (`Tasikmalaya_Merged_Suitability.shp`) with proper coordinate reference system harmonization and area recalculation.
+
+```bash
+python process_shapefiles.py
+```
+
+---
+
+### 12. `add_summary_attributes.py` — QGIS Summary Attributes
+
+**For use inside the QGIS Python Console.** Adds city-wide and per-kecamatan area and percentage summary attributes directly into the attribute table of the Conformity layer (`C_Ses_Ha`, `C_Tdk_Ha`, etc.). Useful for dynamic styling and dashboarding in QGIS.
+
+---
+
 ## GIS Data
 
 | Layer | Format | CRS | Description |
