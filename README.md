@@ -1,3 +1,7 @@
+## UI / UX Mockup
+
+![UI Mockup](ui_mockup.png)
+
 # Satu Peta — GeoServer Upload Scripts
 
 Python automation scripts for uploading GIS shapefiles (Batas Kecamatan & Jaringan Jalan) and SLD styles to a GeoServer instance, then publishing them as WMS/WFS layers.
